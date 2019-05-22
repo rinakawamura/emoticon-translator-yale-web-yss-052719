@@ -7,8 +7,7 @@ def load_library(path)
     emoticons["get_meaning"][symbols[1]] = meaning
     emoticons["get_emoticon"][symbols[0]] = symbols[1]
   end
-
-
+  return emoticons
 end
 
 load_library('./lib/emoticons.yml')
