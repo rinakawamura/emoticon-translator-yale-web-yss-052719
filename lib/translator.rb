@@ -10,22 +10,19 @@ def load_library(path)
   return emoticons
 end
 
-# def get_japanese_emoticon(western)
-#   japanese = nil
-#   emoticons.each do |name, symbols|
-#     if symbols[0] == western
-#       japanese = symbols[1]
-#     end
-#   end
-#   return japanese
-# end
-#
-# def get_english_meaning(japanese)
-#   western = nil
-#   emoticons.each do |name, symbols|
-#     if symbols[1] == japanese
-#       western = symbols[0]
-#     end
-#   end
-#   return western
-# end
+def get_japanese_emoticon(symbol)
+  emoticons["get_emoticon"].each do |english_emoticon, japanese_emoticon|
+    if english_emoticon == symbols
+      return japanese_emoticon
+    end
+end
+
+def get_english_meaning(japanese)
+  western = nil
+  emoticons.each do |name, symbols|
+    if symbols[1] == japanese
+      western = symbols[0]
+    end
+  end
+  return western
+end
