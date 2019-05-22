@@ -12,7 +12,7 @@ end
 
 def get_japanese_emoticon(symbol)
   emoticons["get_emoticon"].each do |english_emoticon, japanese_emoticon|
-    if english_emoticon == symbols
+    if english_emoticon == symbol
       return japanese_emoticon
     end
 end
