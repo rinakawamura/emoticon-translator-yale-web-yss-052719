@@ -15,6 +15,7 @@ def get_japanese_emoticon(symbol)
     if english_emoticon == symbol
       return japanese_emoticon
     end
+  end
 end
 
 def get_english_meaning(japanese)
