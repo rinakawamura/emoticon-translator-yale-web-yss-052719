@@ -14,6 +14,12 @@ def get_japanese_emoticon(Western)
   return Japanese
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(Japanese)
+  Western = nil
+  emoticons.each do |name, symbols|
+    if symbols[1] == Japanese
+      Western = symbols[0]
+    end
+  end
+  return Western
 end
