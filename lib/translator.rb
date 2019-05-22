@@ -4,22 +4,22 @@ def load_library
   emoticons = YAML.load_file('emoticons.yml')
 end
 
-def get_japanese_emoticon(Western)
-  Japanese = nil
+def get_japanese_emoticon(western)
+  japanese = nil
   emoticons.each do |name, symbols|
-    if symbols[0] == Western
-      Japanese = symbols[1]
+    if symbols[0] == western
+      japanese = symbols[1]
     end
   end
-  return Japanese
+  return japanese
 end
 
-def get_english_meaning(Japanese)
-  Western = nil
+def get_english_meaning(japanese)
+  western = nil
   emoticons.each do |name, symbols|
-    if symbols[1] == Japanese
-      Western = symbols[0]
+    if symbols[1] == japanese
+      western = symbols[0]
     end
   end
-  return Western
+  return western
 end
